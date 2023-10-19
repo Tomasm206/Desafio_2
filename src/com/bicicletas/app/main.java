@@ -8,7 +8,7 @@ import com.bicicletas.dominio.Vendedor;
 public class main {
     public static void main(String[] args) {
         Nomina nomina = new Nomina();
-        Directo juan = new Directo("Juan", -4_840_000);
+        Directo juan = new Directo("Juan", 4_840_000);
         Vendedor julian = new Vendedor("Julián", 2_050_000, 45_510_000);
         Vendedor claudia = new Vendedor("Claudia", 1_380_000, 35_989_000);
         Freelance johanna = new Freelance("Johanna", 71_000, 89);
