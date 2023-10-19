@@ -10,7 +10,8 @@ public class Nomina {
         for (Empleado empleado : empleados){
             if (empleado instanceof Vendedor){
                 long salario = empleado.calcularSalario();
-                System.out.println("El salario de " + empleado.nombre + " es: $" + salario+ " (Valor ganado por comisión = $"+((Vendedor) empleado).calcularComision()+" )");
+                System.out.println("El salario de " + empleado.nombre + " es: $"
+                        + salario+ " (Valor ganado por comisión = $"+((Vendedor) empleado).calcularComision()+" )");
             }else {
                 long salario = empleado.calcularSalario();
                 System.out.println("El salario de " + empleado.nombre + " es: $" + salario);
@@ -30,4 +31,7 @@ public class Nomina {
                 .forEach(empleado -> System.out.println(empleado.nombre));
     }
 
+    public List<Empleado> getEmpleados() {
+        return empleados;
+    }
 }
