@@ -1,9 +1,6 @@
 package com.bicicletas.app;
 
-import com.bicicletas.dominio.Directo;
-import com.bicicletas.dominio.Freelance;
-import com.bicicletas.dominio.Nomina;
-import com.bicicletas.dominio.Vendedor;
+import com.bicicletas.dominio.*;
 
 public class main {
     public static void main(String[] args) {
@@ -14,6 +11,7 @@ public class main {
         Freelance johanna = new Freelance("Johanna", 71_000, 89);
         Directo david = new Directo("David", 3_975_000);
         Freelance gustavo = new Freelance("Gustavo", 42_500, 65);
+        Promotor pedro = new Promotor("Pedro", 2000, 200,77);
 
         nomina.getEmpleados().add(juan);
         nomina.getEmpleados().add(julian);
@@ -21,9 +19,17 @@ public class main {
         nomina.getEmpleados().add(johanna);
         nomina.getEmpleados().add(david);
         nomina.getEmpleados().add(gustavo);
+        nomina.getEmpleados().add(pedro);
 
+        System.out.println("********************************************************");
         nomina.calcularNomina();
+        System.out.println("********************************************************\n");
+        System.out.println("*********************");
         nomina.listarDirectos();
+        System.out.println("*********************");
         nomina.listarFreelancers();
+        System.out.println("*********************");
+        nomina.listarPromotores();
+        System.out.println("*********************");
     }
 }

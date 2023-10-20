@@ -30,6 +30,12 @@ public class Nomina {
                 .filter(empleado -> empleado instanceof Freelance)
                 .forEach(empleado -> System.out.println(empleado.nombre));
     }
+    public void listarPromotores() {
+        System.out.println("Empleados promotores:");
+        empleados.stream()
+                .filter(empleado -> empleado instanceof Promotor)
+                .forEach(empleado -> System.out.println(empleado.nombre));
+    }
 
     public List<Empleado> getEmpleados() {
         return empleados;
