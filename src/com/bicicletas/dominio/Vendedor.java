@@ -11,4 +11,9 @@ public class Vendedor extends Directo{
     public long calcularComision() {
         return salario > 1_500_000 ? (long)(salario * 0.035) : (long)(salario * 0.045); //Funciona como if/else
     }
+
+    @Override
+    public long calcularSalario() {
+        return super.calcularSalario() + calcularComision();
+    }
 }
